@@ -16,12 +16,12 @@
       </th>
     </thead>
     <tbody>
-      <tr *ngFor="let uno of listadoProductos" app-fila-pelicula (peliculaSeleccionado)="mostrarDetalles($event)"  (click)="mostrarDetalles(uno)">
+      <tr *ngFor="let uno of listadoProductos"   (click)="mostrarDetalles(uno)">
         <td>{{uno.codigo}}</td>
         <td>{{uno.descripcion}}</td>
         <td>{{uno.precio}}</td>
         <td>{{uno.stock}}</td>
-        <!-- <td>{{uno.paisOrigen.name}}</td> -->
+        <td>{{uno.paisOrigen}}</td>
         <td >{{uno.comestible}}</td>
         <td> <i class="fa fa-check "></i></td>
       </tr>

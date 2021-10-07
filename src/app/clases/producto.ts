@@ -3,6 +3,7 @@ export class Producto {
     descripcion!:string;
     precio!:number;
     stock!:number;
-    paisOrigen:string = '';
+    //paisOrigen:string = '';
+    paisOrigen!: any;
     comestible!:boolean;
 }

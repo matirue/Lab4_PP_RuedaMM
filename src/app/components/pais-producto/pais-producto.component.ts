@@ -8,9 +8,11 @@ import { Producto } from 'src/app/clases/producto';
 })
 export class PaisProductoComponent implements OnInit {
 
-  @Input() detalleProd!: Producto;
+  @Input() detalleProd: Producto;
 
-  constructor() { }
+  constructor() { 
+    this.detalleProd = new Producto();
+  }
 
   ngOnInit(): void {
   }

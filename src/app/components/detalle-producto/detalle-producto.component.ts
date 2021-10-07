@@ -9,7 +9,7 @@ import { Producto } from 'src/app/clases/producto';
 export class DetalleProductoComponent implements OnInit {
 
   @Input()
-  unProd: Producto = new Producto;
+  unProd?: Producto;
 
   constructor() { }
 

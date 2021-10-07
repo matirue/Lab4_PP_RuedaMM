@@ -34,7 +34,7 @@ export class ProductoListadoComponent implements OnInit {
   }
 
 
-  mostrarDetalles(parametroProducto:any)
+  mostrarDetalles(parametroProducto: Producto)
   {
   	console.log(parametroProducto);
     this.productoSeleccionado.emit(parametroProducto);
