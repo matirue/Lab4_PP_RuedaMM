@@ -13,6 +13,7 @@ export class NavBarComponent implements OnInit {
   public userLogged: any;
   public ocultarLogin: boolean = true;
   public ocultarLogout: boolean = false;
+  public mostrarCont: boolean = false; 
 
   
   public load: boolean = false;
@@ -28,11 +29,16 @@ export class NavBarComponent implements OnInit {
         this.ocultarLogin = false;
         this.ocultarLogout = true;
 
+        if(this.userLogged == 'admin@admin.com'){
+          this.mostrarCont = true;
+        }
+
         console.log('User log -> ', this.userLogged);
       } else {
         
         this.ocultarLogin = true;
         this.ocultarLogout = false;
+        this.mostrarCont = false;
 
         console.log(' No hay usuario logueado ');
       }
@@ -65,7 +71,7 @@ export class NavBarComponent implements OnInit {
 
   AltaProducto(){ this.router.navigateByUrl('alta-producto'); }
   ListaProducto(){ this.router.navigateByUrl('producto-detalle'); }
-  // historial(){ this.router.navigateByUrl('juegos/resultados'); }
+  IrContainer(){ this.router.navigateByUrl('abm-container'); }
   // encuesta(){ this.router.navigateByUrl('juegos/encuesta'); }
 
 }
